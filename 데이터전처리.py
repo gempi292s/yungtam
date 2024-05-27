@@ -2,6 +2,7 @@ import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 import os
 
+#데이터 전처리
 df = pd.read_csv('english Dictionary.csv')
 df.drop_duplicates(subset=['word'], keep = 'last', inplace=True)
 df = df.dropna(subset=['word'])
